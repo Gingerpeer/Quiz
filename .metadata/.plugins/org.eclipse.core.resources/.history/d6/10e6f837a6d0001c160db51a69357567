@@ -6,7 +6,7 @@ public class Quiz {
 	
 
 	public static void main(String[] args) {
-		Question question = new MultipleChoiceQuestion("What is my favorite OS?", "Macintosh","Windows","Linux","Android","IOS","b");
+		/*Question question = new MultipleChoiceQuestion("What is my favorite OS?", "Macintosh","Windows","Linux","Android","IOS","b");
 		question.check();
 		Question question2 = new MultipleChoiceQuestion("What is my favorite Programming Language?","Ruby","PHP","Java","Python","C#","D");
 		question2.check();
@@ -17,7 +17,7 @@ public class Quiz {
 		Question question5 = new MultipleChoiceQuestion("What is my Cloud Storage Provider of choice?","Google Drive","Microsoft Onedrive","Dropbox","iCloud","pCloud","A");
 		question5.check();
 		Question question6 = new MultipleChoiceQuestion("How good is Git?","1/5","2/5","3/5","4/5","5/5","E");
-		question6.check();
+		question6.check();*/
 		Question question7 = new TrueFalseQuestion("Has Donald Trump ever been the President of the United States?", "TRUE");
 		question7.check();
 		Question question8 = new TrueFalseQuestion("Did Elon Musk buy Amazon?", "FALSE");

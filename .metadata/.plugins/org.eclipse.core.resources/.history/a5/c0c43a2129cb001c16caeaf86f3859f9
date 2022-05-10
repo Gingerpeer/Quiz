@@ -1,0 +1,17 @@
+
+
+public class Quiz {
+	
+	
+	
+
+	public static void main(String[] args) {
+		MultipleChoiceQuestion question = new MultipleChoiceQuestion("What is my favorite OS?", "Macintosh","Windows","Linux","Android","IOS","b");
+		question.check();
+		MultipleChoiceQuestion question2 = new MultipleChoiceQuestion("What is my favorite Programming Language?","Ruby","PHP","Java","Python","C#","D");
+		question2.check();
+		MultipleChoiceQuestion question3 = new MultipleChoiceQuestion("What is my favorite Web Development Library?","Asp.net","Angular","Vue","Django","React","e");
+		question3.check();
+	}
+
+}

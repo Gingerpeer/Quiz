@@ -1,0 +1,34 @@
+import javax.swing.JOptionPane;
+public class TrueFalseQuestion extends Question {
+
+	@Override
+	String ask() {
+		correctAnswer.toUpperCase();
+		String res = JOptionPane.showInputDialog(question);
+		res = res.toUpperCase();
+		if(res == "F" || res == "FALSE" || res == "N" || res == "NO") res = "FALSE";
+		if(res == "T" || res == "TRUE" || res == "Y" || res == "YES") res = "TRUE";
+	if(!checkIfValid(res)) {
+		JOptionPane.showMessageDialog(null,"Invalid answer. Please enter TRUE or FALSE");
+		ask();
+	}else if (res.equals(correctAnswer)) {
+		return true;
+		}
+
+	return question;
+	
+	}
+	public boolean checkIfValid(String str) {
+		String[] validArray = {"FALSE","TRUE"};
+		for(int i = 0;i<2;i++) {
+			if(str.equals(validArray[i])) {
+				return true;
+			}
+		}
+		return false;
+	}
+	TrueFalseQuestion(String question, String answer){
+		this.question = "TRUE or FALSE: " + super.question;
+		super.correctAnswer = ask();
+	}
+}

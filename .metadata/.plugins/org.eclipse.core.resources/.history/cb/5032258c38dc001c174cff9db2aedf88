@@ -1,0 +1,31 @@
+import javax.swing.JOptionPane;
+
+public class MultipleChoiceQuestion extends Question {
+	
+	public MultipleChoiceQuestion() {
+//		question = query + "\n";
+//		question += "A. " + a + "\n";
+//		question += "B. " + b + "\n";
+//		question += "C. " + c + "\n";
+//		question += "D. " + d + "\n";
+//		question += "E. " + e + "\n";
+//		
+		correctAnswer = question.answer.toUpperCase();
+	}
+	String ask() {
+		question.setVisible(true);
+		return question.answer;
+	}
+	public boolean checkIfValid(String str) {
+		String[] validArray = {"A","B","C","D","E"};
+		for(int i = 0;i<5;i++) {
+			if(str.equals(validArray[i])) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+
+}

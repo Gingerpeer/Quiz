@@ -1,0 +1,50 @@
+import javax.swing.JButton;
+//import javax.swing.JOptionPane;
+//import javax.swing.JPanel;
+import java.awt.*; 
+import javax.swing.*;
+
+public class MultipleChoiceQuestion extends Question {
+	
+//	public MultipleChoiceQuestion() {
+////		question = query + "\n";
+////		question += "A. " + a + "\n";
+////		question += "B. " + b + "\n";
+////		question += "C. " + c + "\n";
+////		question += "D. " + d + "\n";
+////		question += "E. " + e + "\n";
+////		
+////		correctAnswer = answer.toUpperCase();
+//		
+//	}
+	public boolean checkIfValid(String str) {
+		String[] validArray = {"A","B","C","D","E"};
+		for(int i = 0;i<5;i++) {
+			if(str.equals(validArray[i])) {
+				return true;
+			}
+		}
+		return false;
+	}
+	void addButton(JPanel buttons,String label) {
+		JButton button = new JButton(label);
+		button.addActionListener(question); 
+		buttons.add(button);
+	}
+	
+	MultipleChoiceQuestion(String question, String answer){
+//		this.question = new QuestionDialog(); 
+//		this.question.setLayout(new GridLayout(0,1));
+//		this.question.add(new JLabel("    " + question + "       ",JLabel.CENTER));
+		super(question); 
+		JPanel buttons = new JPanel(); 
+		addButton(buttons,"TRUE"); 
+		addButton(buttons,"FALSE"); 
+		this.question.add(buttons);
+		this.question.setModal(true); 
+		this.question.pack();
+		this.question.setLocationRelativeTo(null);
+		super.correctAnswer = answer;
+	}
+
+}
